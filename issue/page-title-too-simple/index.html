@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+      <meta name="robots" content="noindex">
+
+    <title>Page title is not detailed enough | Accessibility Issues</title>
+
+    <!--[if gt IE 8]><!--><link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" /><!--<![endif]-->
+    <!--[if lte IE 8]><link href="../../stylesheets/screen-old-ie.css" rel="stylesheet" media="screen" /><![endif]-->
+
+    <link rel="canonical" href="//issue/page-title-too-simple/">
+
+
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+    <script src="../../javascripts/application.js"></script>
+
+      <meta property="og:image" content="//images/govuk-large.png" />
+      <meta property="og:site_name" content="Accessibility Issues" />
+      <meta property="og:title" content="Page title is not detailed enough" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="//issue/page-title-too-simple/" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:image" content="//images/govuk-large.png" />
+      <meta property="twitter:title" content="Page title is not detailed enough | Accessibility Issues" />
+      <meta property="twitter:url" content="//issue/page-title-too-simple/" />
+  </head>
+
+  <body>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        <header class="header header--full-width">
+  <div class="header__container">
+    <div class="header__brand">
+        <a href="/">
+        <span class="header__title">
+          Accessibility Issues
+            <span class="phase-banner">Alpha</span>
+        </span>
+        </a>
+    </div>
+
+      <div data-module="navigation">
+        <button type="button" class="header__navigation-toggle js-nav-toggle" aria-controls="navigation" aria-label="Show or hide top level navigation">Menu</button>
+
+        <nav id="navigation" class="header__navigation js-nav" aria-label="Top Level Navigation" aria-hidden="true">
+          <ul>
+              <li>
+                <a href="https://github.com/alphagov/accessibility-issues">
+                  GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</header>
+
+      </div>
+
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+        <div class="app-pane__toc">
+          <div class="toc" data-module="table-of-contents">
+            <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+            <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+              <ul>
+  <li>
+    <a href="#title">Page title is not detailed enough</a>
+    <ul>
+      <li>
+        <a href="#example">Example</a>
+      </li>
+      <li>
+        <a href="#why-it-39-s-a-problem">Why it’s a problem</a>
+      </li>
+      <li>
+        <a href="#how-to-test-for-it">How to test for it</a>
+      </li>
+      <li>
+        <a href="#how-to-fix-it">How to fix it</a>
+      </li>
+      <li>
+        <a href="#which-audit-tools-find-it">Which audit tools find it</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </div>
+        </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            
+  <h1 id="title">Page title is not detailed enough</h1>
+
+  <dl class="data">
+    <dt>Severity</dt>
+    <dd class="strength1">
+        Minor
+    </dd>
+
+    <dt>Complexity</dt>
+    <dd class="strength1">
+        Easy
+    </dd>
+
+    <dt>Prevalence</dt>
+    <dd class="strength2">
+        Can happen
+    </dd>
+
+    <dt>Detectability</dt>
+      <dd class="strength3">
+        0%
+      </dd>
+
+  <dt>WCAG Success Criterion</dt>
+    <dd>2.4.2</dd>
+
+    <dt>Concerns</dt>
+    <dd>content</dd>
+
+    <dt>Impairments</dt>
+    <dd>visual, cognitive</dd>
+</dl>
+
+  
+
+  <h2 id="example">Example</h2>
+
+
+
+
+  <p>Page titles (or the content of <code>&lt;title&gt;</code> tags) of pages within the same service all include one keyword which is too simple and vague, although unique among all pages.
+E.g. &ldquo;Contact - Register your micropig&rdquo; for a page which lets you &ldquo;Enter your contact details&rdquo; as the first heading says.</p>
+<h2 id="why-it-39-s-a-problem">Why it&rsquo;s a problem</h2>
+<ul>
+<li>The page title is often the very first thing a screen reader reads out. It helps screen reader users to know quickly which page they are on and what it is about. When the page title is too short and unclear, it will make it difficult to get a quick overview of the content.</li>
+<li>Users often use page titles to identify a page, for example because it will be what a search engine uses as the link text to the page or it appears in users&rsquo; bookmarks. Unclear page titles make those confusing.</li>
+<li>Search engines weigh content of page titles highly.</li>
+</ul>
+<h2 id="how-to-test-for-it">How to test for it</h2>
+<p>Testing tools cannot identify the usefulness of a page title. This has to be tested manually, but additional tools can help making page titles more visible.</p>
+<h2 id="how-to-fix-it">How to fix it</h2>
+<p>The easiest way is to always use the same content as the first heading plus the static website title. E.g. &ldquo;Enter your contact details - Register your micropig&rdquo;.</p>
+
+<p>But the first part can also be something that is similar to the first heading and doesn&rsquo;t need to be the same.</p>
+
+
+
+  
+
+    <h2 id="which-audit-tools-find-it">Which audit tools find it</h2>
+
+  <table>
+    <tbody>
+        <tr>
+          <th>Tenon</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>AChecker</th>
+          <td class="manual">user to check</td>
+        </tr>
+        <tr>
+          <th>aXe</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Asqa&shy;tasun</th>
+          <td class="manual">user to check</td>
+        </tr>
+        <tr>
+          <th>Sort&shy;Site</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>WAVE</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>HTML_&shy;Code&shy;Sniffer</th>
+          <td class="manual">user to check</td>
+        </tr>
+        <tr>
+          <th>Google ADT</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th><abbr title=European Internet Inclusion Initiative>EIII</abbr></th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Nu Html Checker</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Site&shy;improve</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th><abbr title=Functional Accessibility Evaluator>FAE</abbr></th>
+          <td class="manual">user to check</td>
+        </tr>
+        <tr>
+          <th>AS&shy;Lint</th>
+          <td class="notfound">not found</td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+            
+          </main>
+
+            <ul class="contribution-banner">
+              <li><a href="https://github.com/alphagov/accessibility-issues/blob/master/source/issue/page-title-too-simple/index.html.md">View source</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues/issues/new?labels=bug&amp;title=Re:%20'Page%20title%20is%20not%20detailed%20enough'&amp;body=Problem%20with%20'Page%20title%20is%20not%20detailed%20enough'%20(//issue/page-title-too-simple/)">Report problem</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues">GitHub Repo</a></li>
+            </ul>
+
+          <footer class="footer">
+  <div class="footer__licence">
+    <a class="footer__licence-logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
+    <p class="footer__licence-description">All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+  </div>
+
+  <div class="footer__copyright">
+    <a class="footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>

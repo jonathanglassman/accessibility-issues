@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+      <meta name="robots" content="noindex">
+
+    <title>Page has no h1 | Accessibility Issues</title>
+
+    <!--[if gt IE 8]><!--><link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" /><!--<![endif]-->
+    <!--[if lte IE 8]><link href="../../stylesheets/screen-old-ie.css" rel="stylesheet" media="screen" /><![endif]-->
+
+    <link rel="canonical" href="//issue/missing-h1/">
+
+
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+    <script src="../../javascripts/application.js"></script>
+
+      <meta property="og:image" content="//images/govuk-large.png" />
+      <meta property="og:site_name" content="Accessibility Issues" />
+      <meta property="og:title" content="Page has no h1" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="//issue/missing-h1/" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:image" content="//images/govuk-large.png" />
+      <meta property="twitter:title" content="Page has no h1 | Accessibility Issues" />
+      <meta property="twitter:url" content="//issue/missing-h1/" />
+  </head>
+
+  <body>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        <header class="header header--full-width">
+  <div class="header__container">
+    <div class="header__brand">
+        <a href="/">
+        <span class="header__title">
+          Accessibility Issues
+            <span class="phase-banner">Alpha</span>
+        </span>
+        </a>
+    </div>
+
+      <div data-module="navigation">
+        <button type="button" class="header__navigation-toggle js-nav-toggle" aria-controls="navigation" aria-label="Show or hide top level navigation">Menu</button>
+
+        <nav id="navigation" class="header__navigation js-nav" aria-label="Top Level Navigation" aria-hidden="true">
+          <ul>
+              <li>
+                <a href="https://github.com/alphagov/accessibility-issues">
+                  GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</header>
+
+      </div>
+
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+        <div class="app-pane__toc">
+          <div class="toc" data-module="table-of-contents">
+            <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+            <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+              <ul>
+  <li>
+    <a href="#title">Page has no h1</a>
+    <ul>
+      <li>
+        <a href="#example">Example</a>
+      </li>
+      <li>
+        <a href="#why-it-39-s-a-problem">Why it’s a problem</a>
+      </li>
+      <li>
+        <a href="#how-to-test-for-it">How to test for it</a>
+      </li>
+      <li>
+        <a href="#how-to-fix-it">How to fix it</a>
+      </li>
+      <li>
+        <a href="#which-audit-tools-find-it">Which audit tools find it</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </div>
+        </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            
+  <h1 id="title">Page has no h1</h1>
+
+  <dl class="data">
+    <dt>Severity</dt>
+    <dd class="strength2">
+        Medium
+    </dd>
+
+    <dt>Complexity</dt>
+    <dd class="strength1">
+        Easy
+    </dd>
+
+    <dt>Prevalence</dt>
+    <dd class="strength2">
+        Can happen
+    </dd>
+
+    <dt>Detectability</dt>
+      <dd class="strength2">
+        53%
+      </dd>
+
+  <dt>WCAG Success Criterion</dt>
+    <dd>1.3.1</dd>
+
+    <dt>Concerns</dt>
+    <dd>code</dd>
+
+    <dt>Impairments</dt>
+    <dd>visual</dd>
+</dl>
+
+  
+
+  <h2 id="example">Example</h2>
+
+
+
+
+  <p>A page contains no level 1 heading (<code>h1</code>) but starts with an level 2 heading (<code>h2</code>).</p>
+<h2 id="why-it-39-s-a-problem">Why it&rsquo;s a problem</h2>
+<p>Screen reader users often navigate by headings. Having a good hierarchical structure lets them get an overview of what the page is about.</p>
+
+<p>This is also beneficial for SEO.</p>
+<h2 id="how-to-test-for-it">How to test for it</h2>
+<p>A lot of testing tools find this.</p>
+
+<p>There are also browser extensions and bookmarklets which show a page&rsquo;s heading structure (also called document outline).</p>
+<h2 id="how-to-fix-it">How to fix it</h2>
+<p>Always let your main content start with an <code>h1</code>. This first heading should also reflect what the page is about.</p>
+
+
+
+  
+
+    <h2 id="which-audit-tools-find-it">Which audit tools find it</h2>
+
+  <table>
+    <tbody>
+        <tr>
+          <th>Tenon</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>AChecker</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>aXe</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Asqa&shy;tasun</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Sort&shy;Site</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>WAVE</th>
+          <td class="warning">warning only</td>
+        </tr>
+        <tr>
+          <th>HTML_&shy;Code&shy;Sniffer</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Google ADT</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th><abbr title=European Internet Inclusion Initiative>EIII</abbr></th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Nu Html Checker</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Site&shy;improve</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th><abbr title=Functional Accessibility Evaluator>FAE</abbr></th>
+          <td class="warning">warning only</td>
+        </tr>
+        <tr>
+          <th>AS&shy;Lint</th>
+          <td class="found">issue found</td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+            
+          </main>
+
+            <ul class="contribution-banner">
+              <li><a href="https://github.com/alphagov/accessibility-issues/blob/master/source/issue/missing-h1/index.html.md">View source</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues/issues/new?labels=bug&amp;title=Re:%20'Page%20has%20no%20h1'&amp;body=Problem%20with%20'Page%20has%20no%20h1'%20(//issue/missing-h1/)">Report problem</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues">GitHub Repo</a></li>
+            </ul>
+
+          <footer class="footer">
+  <div class="footer__licence">
+    <a class="footer__licence-logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
+    <p class="footer__licence-description">All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+  </div>
+
+  <div class="footer__copyright">
+    <a class="footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
