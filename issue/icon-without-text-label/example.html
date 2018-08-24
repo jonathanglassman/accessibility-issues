@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Example: Icon has no text label</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="noindex" />
+
+    <script src="../../javascripts/iframeResizer.contentWindow.min.js"></script>
+    <script>
+      
+
+    </script>
+    <style>
+      body {
+        color: #000;
+        background-color: #fff;
+        margin: 0;
+        padding: 1em;
+      }
+      .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button::after {
+  content: '';
+  display: block;
+  background: no-repeat url('arrow-down.svg') center center;
+  background-size: 18px auto;
+  width: 20px;
+  height: 40px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <button>
+  <span class="visually-hidden">Show account data</span>
+</button>
+
+
+
+
+  </body>
+</html>

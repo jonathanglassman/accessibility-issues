@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+      <meta name="robots" content="noindex">
+
+    <title>Icon has no text label | Accessibility Issues</title>
+
+    <!--[if gt IE 8]><!--><link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" /><!--<![endif]-->
+    <!--[if lte IE 8]><link href="../../stylesheets/screen-old-ie.css" rel="stylesheet" media="screen" /><![endif]-->
+
+    <link rel="canonical" href="//issue/icon-without-text-label/">
+
+
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+    <script src="../../javascripts/application.js"></script>
+
+      <meta property="og:image" content="//images/govuk-large.png" />
+      <meta property="og:site_name" content="Accessibility Issues" />
+      <meta property="og:title" content="Icon has no text label" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="//issue/icon-without-text-label/" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:image" content="//images/govuk-large.png" />
+      <meta property="twitter:title" content="Icon has no text label | Accessibility Issues" />
+      <meta property="twitter:url" content="//issue/icon-without-text-label/" />
+  </head>
+
+  <body>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        <header class="header header--full-width">
+  <div class="header__container">
+    <div class="header__brand">
+        <a href="https://alphagov.github.io/accessibility-issues/">
+        <span class="header__title">
+          Accessibility Issues
+            <span class="phase-banner">Alpha</span>
+        </span>
+        </a>
+    </div>
+
+      <div data-module="navigation">
+        <button type="button" class="header__navigation-toggle js-nav-toggle" aria-controls="navigation" aria-label="Show or hide top level navigation">Menu</button>
+
+        <nav id="navigation" class="header__navigation js-nav" aria-label="Top Level Navigation" aria-hidden="true">
+          <ul>
+              <li>
+                <a href="https://github.com/alphagov/accessibility-issues">
+                  GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</header>
+
+      </div>
+
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+        <div class="app-pane__toc">
+          <div class="toc" data-module="table-of-contents">
+            <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+            <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+              <ul>
+  <li>
+    <a href="#title">Icon has no text label</a>
+    <ul>
+      <li>
+        <a href="#code-example">Code example</a>
+      </li>
+      <li>
+        <a href="#why-it-39-s-a-problem">Why it’s a problem</a>
+      </li>
+      <li>
+        <a href="#how-to-test-for-it">How to test for it</a>
+      </li>
+      <li>
+        <a href="#how-to-fix-it">How to fix it</a>
+      </li>
+      <li>
+        <a href="#which-audit-tools-find-it">Which audit tools find it</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </div>
+        </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            
+  <h1 id="title">Icon has no text label</h1>
+
+  <dl class="data">
+    <dt>Severity</dt>
+    <dd class="strength3">
+        Critical
+    </dd>
+
+    <dt>Complexity</dt>
+    <dd class="strength2">
+        Medium
+    </dd>
+
+    <dt>Prevalence</dt>
+    <dd class="strength3">
+        Very common
+    </dd>
+
+    <dt>Detectability</dt>
+      <dd class="strength3">
+        0%
+      </dd>
+
+  <dt>WCAG Success Criterion</dt>
+    <dd>1.1.1</dd>
+
+    <dt>Concerns</dt>
+    <dd>design</dd>
+
+    <dt>Impairments</dt>
+    <dd>visual, cognitive</dd>
+</dl>
+
+  
+  <h2 id="code-example"><a href="example.html">Code example</a></h2>
+
+  <iframe src="example.html" title="Code example for 'Icon has no text label'"></iframe>
+
+    <pre class="html"><code>&lt;button&gt;
+  &lt;span class=&quot;visually-hidden&quot;&gt;Show account data&lt;&#x2F;span&gt;
+&lt;&#x2F;button&gt;</code></pre>
+
+    <pre class="css"><code>.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button::after {
+  content: &#x27;&#x27;;
+  display: block;
+  background: no-repeat url(&#x27;arrow-down.svg&#x27;) center center;
+  background-size: 18px auto;
+  width: 20px;
+  height: 40px;
+}</code></pre>
+
+
+
+
+  <p>A clickable icon that shows a down arrow doesn&rsquo;t have any accompanying text.</p>
+<h2 id="why-it-39-s-a-problem">Why it&rsquo;s a problem</h2>
+<p>Just an icon by itself can be difficult to understand by anyone as it can be ambiguous and unclear. This would be worse for people with cognitive impairments.</p>
+
+<p>When the image doesn&rsquo;t load for whatever reason (for example due to a bad connection or firewall setting), the action behind the icon will be completely missed.</p>
+
+<p>When people change colours on websites (for example, people with visual impairments who need a higher contrast or dyslexic people who need a tint), it can happen that background images will be removed. That also means that the action will be missed.</p>
+
+<p>Speech recognition users would not know how to activate the icon as it&rsquo;s not clear what they should call it. With the button look missing, users wouldn&rsquo;t know that it could be activated with a button shortcut. The only way to click it would be by using &ldquo;mouse grid&rdquo; which is time-consuming.</p>
+
+<p>As there is visually hidden alternative text in this case, this is not an issue for screen reader users.</p>
+<h2 id="how-to-test-for-it">How to test for it</h2>
+<p>Disable images and see if everything still makes sense without them.
+No testing tool finds this.</p>
+<h2 id="how-to-fix-it">How to fix it</h2>
+<p>Always accompany icons with text. Even when this can be a design challenge.</p>
+
+
+
+  
+
+    <h2 id="which-audit-tools-find-it">Which audit tools find it</h2>
+
+  <table>
+    <tbody>
+        <tr>
+          <th>Tenon</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>AChecker</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>aXe</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Asqa&shy;tasun</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Sort&shy;Site</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>WAVE</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>HTML_&shy;Code&shy;Sniffer</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Google ADT</th>
+          <td class="untested">not tested yet</td>
+        </tr>
+        <tr>
+          <th><abbr title=European Internet Inclusion Initiative>EIII</abbr></th>
+          <td class="untested">not tested yet</td>
+        </tr>
+        <tr>
+          <th>Nu Html Checker</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>Site&shy;improve</th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th><abbr title=Functional Accessibility Evaluator>FAE</abbr></th>
+          <td class="notfound">not found</td>
+        </tr>
+        <tr>
+          <th>AS&shy;Lint</th>
+          <td class="notfound">not found</td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+            
+          </main>
+
+            <ul class="contribution-banner">
+              <li><a href="https://github.com/alphagov/accessibility-issues/blob/master/source/issue/icon-without-text-label/index.html.md">View source</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues/issues/new?labels=bug&amp;title=Re:%20'Icon%20has%20no%20text%20label'&amp;body=Problem%20with%20'Icon%20has%20no%20text%20label'%20(//issue/icon-without-text-label/)">Report problem</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues">GitHub Repo</a></li>
+            </ul>
+
+          <footer class="footer">
+  <div class="footer__licence">
+    <a class="footer__licence-logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
+    <p class="footer__licence-description">All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+  </div>
+
+  <div class="footer__copyright">
+    <a class="footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>

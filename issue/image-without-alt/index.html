@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+      <meta name="robots" content="noindex">
+
+    <title>Image without alt attribute | Accessibility Issues</title>
+
+    <!--[if gt IE 8]><!--><link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" /><!--<![endif]-->
+    <!--[if lte IE 8]><link href="../../stylesheets/screen-old-ie.css" rel="stylesheet" media="screen" /><![endif]-->
+
+    <link rel="canonical" href="//issue/image-without-alt/">
+
+
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+    <script src="../../javascripts/application.js"></script>
+
+      <meta property="og:image" content="//images/govuk-large.png" />
+      <meta property="og:site_name" content="Accessibility Issues" />
+      <meta property="og:title" content="Image without alt attribute" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="//issue/image-without-alt/" />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:image" content="//images/govuk-large.png" />
+      <meta property="twitter:title" content="Image without alt attribute | Accessibility Issues" />
+      <meta property="twitter:url" content="//issue/image-without-alt/" />
+  </head>
+
+  <body>
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="skip-link">Skip to main content</a>
+
+        <header class="header header--full-width">
+  <div class="header__container">
+    <div class="header__brand">
+        <a href="https://alphagov.github.io/accessibility-issues/">
+        <span class="header__title">
+          Accessibility Issues
+            <span class="phase-banner">Alpha</span>
+        </span>
+        </a>
+    </div>
+
+      <div data-module="navigation">
+        <button type="button" class="header__navigation-toggle js-nav-toggle" aria-controls="navigation" aria-label="Show or hide top level navigation">Menu</button>
+
+        <nav id="navigation" class="header__navigation js-nav" aria-label="Top Level Navigation" aria-hidden="true">
+          <ul>
+              <li>
+                <a href="https://github.com/alphagov/accessibility-issues">
+                  GitHub
+                </a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+</header>
+
+      </div>
+
+      <div id="toc-heading" class="toc-show fixedsticky">
+        <a href="#toc" class="toc-show__label js-toc-show" aria-controls="toc">
+          Table of contents <span class="toc-show__icon"></span>
+        </a>
+      </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+        <div class="app-pane__toc">
+          <div class="toc" data-module="table-of-contents">
+            <a href="#" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></a>
+            <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+              <ul>
+  <li>
+    <a href="#title">Image without alt attribute</a>
+    <ul>
+      <li>
+        <a href="#code-example">Code example</a>
+      </li>
+      <li>
+        <a href="#why-it-39-s-a-problem">Why it’s a problem</a>
+      </li>
+      <li>
+        <a href="#how-to-test-for-it">How to test for it</a>
+      </li>
+      <li>
+        <a href="#how-to-fix-it">How to fix it</a>
+      </li>
+      <li>
+        <a href="#which-audit-tools-find-it">Which audit tools find it</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </div>
+        </div>
+
+        <div class="app-pane__content toc-open-disabled">
+          <main id="content" class="technical-documentation" data-module="anchored-headings">
+            
+  <h1 id="title">Image without alt attribute</h1>
+
+  <dl class="data">
+    <dt>Severity</dt>
+    <dd class="strength2">
+        Medium
+    </dd>
+
+    <dt>Complexity</dt>
+    <dd class="strength1">
+        Easy
+    </dd>
+
+    <dt>Prevalence</dt>
+    <dd class="strength2">
+        Can happen
+    </dd>
+
+    <dt>Detectability</dt>
+      <dd class="strength1">
+        100%
+      </dd>
+
+  <dt>WCAG Success Criterion</dt>
+    <dd>1.1.1</dd>
+
+    <dt>Concerns</dt>
+    <dd>code</dd>
+
+    <dt>Impairments</dt>
+    <dd>visual</dd>
+</dl>
+
+  
+  <h2 id="code-example"><a href="example.html">Code example</a></h2>
+
+  <iframe src="example.html" title="Code example for 'Image without alt attribute'"></iframe>
+
+    <pre class="html"><code>&lt;a href=&quot;https:&#x2F;&#x2F;www.gov.uk&quot;&gt;
+  &lt;img src=&quot;logo.png&quot; width=&quot;200&quot; height=&quot;105&quot; &#x2F;&gt;
+  GOV.UK
+&lt;&#x2F;a&gt;</code></pre>
+
+
+
+
+
+  <p>A decorative image is missing its <code>alt</code> attribute.</p>
+<h2 id="why-it-39-s-a-problem">Why it&rsquo;s a problem</h2>
+<p>A lot of screen readers read out the file name of the image when an <code>alt</code> text is missing. That is unhelpful and distracting.</p>
+
+<p>It is also invalid HTML.</p>
+<h2 id="how-to-test-for-it">How to test for it</h2>
+<p>All testing tools find this.</p>
+<h2 id="how-to-fix-it">How to fix it</h2>
+<p>If the image is decorative, add an empty <code>alt</code> parameter.</p>
+<div class="highlight"><pre class="highlight plaintext"><code>  &lt;img src="logo.png" alt="" /&gt;
+</code></pre></div>
+<p>If the image is not decorative, add an <code>alt</code> parameter with text which describes the meaning of the image. <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">W3C&rsquo;s alt decision tree</a> gives a good overview which text to add when.</p>
+
+
+
+  
+
+    <h2 id="which-audit-tools-find-it">Which audit tools find it</h2>
+
+  <table>
+    <tbody>
+        <tr>
+          <th>Tenon</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>AChecker</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>aXe</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Asqa&shy;tasun</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Sort&shy;Site</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>WAVE</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>HTML_&shy;Code&shy;Sniffer</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Google ADT</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th><abbr title=European Internet Inclusion Initiative>EIII</abbr></th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Nu Html Checker</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>Site&shy;improve</th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th><abbr title=Functional Accessibility Evaluator>FAE</abbr></th>
+          <td class="found">issue found</td>
+        </tr>
+        <tr>
+          <th>AS&shy;Lint</th>
+          <td class="found">issue found</td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+            
+          </main>
+
+            <ul class="contribution-banner">
+              <li><a href="https://github.com/alphagov/accessibility-issues/blob/master/source/issue/image-without-alt/index.html.md">View source</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues/issues/new?labels=bug&amp;title=Re:%20'Image%20without%20alt%20attribute'&amp;body=Problem%20with%20'Image%20without%20alt%20attribute'%20(//issue/image-without-alt/)">Report problem</a></li>
+              <li><a href="https://github.com/alphagov/accessibility-issues">GitHub Repo</a></li>
+            </ul>
+
+          <footer class="footer">
+  <div class="footer__licence">
+    <a class="footer__licence-logo" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
+    <p class="footer__licence-description">All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+  </div>
+
+  <div class="footer__copyright">
+    <a class="footer__copyright-logo" href="http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">© Crown copyright</a>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
